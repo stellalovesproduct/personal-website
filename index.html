@@ -66,8 +66,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, #2c5282 100%);
-      color: var(--white);
+      background: linear-gradient(135deg, #daeaf7 0%, #c8dff2 100%);
       padding: 6rem 2rem;
     }
     .hero-inner {
@@ -84,25 +83,26 @@
       border-radius: 50%;
       object-fit: cover;
       object-position: center top;
-      border: 4px solid rgba(255,255,255,.2);
-      box-shadow: 0 0 0 8px rgba(255,255,255,.07), 0 16px 48px rgba(0,0,0,.35);
+      border: 4px solid rgba(255,255,255,.7);
+      box-shadow: 0 0 0 8px rgba(255,255,255,.35), 0 16px 48px rgba(74,144,184,.2);
     }
     .hero-text h1 {
       font-size: 2.6rem;
       font-weight: 700;
       line-height: 1.15;
       margin-bottom: .4rem;
+      color: var(--navy);
     }
     .hero-text .title {
       font-size: 1rem;
-      color: var(--teal-light);
+      color: var(--teal);
       font-weight: 500;
       margin-bottom: 1.5rem;
       letter-spacing: .02em;
     }
     .hero-text p {
       font-size: .975rem;
-      color: rgba(255,255,255,.78);
+      color: var(--muted);
       max-width: 520px;
       line-height: 1.8;
     }
@@ -118,15 +118,16 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.25);
-      color: rgba(255,255,255,.65);
+      border: 1px solid var(--border);
+      color: var(--muted);
       text-decoration: none;
+      background: rgba(255,255,255,.6);
       transition: border-color .2s, color .2s, background .2s;
     }
     .icon-link:hover {
-      border-color: rgba(255,255,255,.6);
-      color: #fff;
-      background: rgba(255,255,255,.1);
+      border-color: var(--teal);
+      color: var(--teal);
+      background: rgba(255,255,255,.9);
     }
     .icon-link svg { display: block; }
 
@@ -361,6 +362,10 @@
           <div class="highlight-card">
             <div class="stat">4×</div>
             <div class="stat-label">Monthly revenue growth achieved within 12 months</div>
+          </div>
+          <div class="highlight-card">
+            <div class="stat">0→1</div>
+            <div class="stat-label">Products launched and scaled across global markets</div>
           </div>
         </div>
       </div>
