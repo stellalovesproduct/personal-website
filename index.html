@@ -8,15 +8,15 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:    #1c3557;
-      --blue:    #3a7cb8;
-      --bg:      #eef4fb;
-      --bg-alt:  #e4eff9;
-      --surface: #f7fafd;
+      --text:    #1c2020;
+      --accent:  #4682b4;
+      --bg:      #f4f5f6;
+      --bg-alt:  #eeeff1;
+      --surface: #f9f9fa;
       --white:   #ffffff;
-      --body:    #4a5f75;
-      --subtle:  #7d93a8;
-      --border:  #c8daea;
+      --body:    #4a4f50;
+      --subtle:  #8a9090;
+      --border:  #dde0e2;
       --radius:  10px;
     }
 
@@ -25,7 +25,7 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: var(--bg);
-      color: var(--navy);
+      color: var(--text);
       line-height: 1.7;
     }
 
@@ -34,7 +34,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(238,244,251,0.94);
+      background: rgba(244,245,246,0.94);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
       padding: 0 2.5rem;
@@ -46,7 +46,7 @@
     .nav-logo {
       font-weight: 700;
       font-size: .95rem;
-      color: var(--navy);
+      color: var(--text);
       letter-spacing: .03em;
     }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
@@ -58,11 +58,11 @@
       letter-spacing: .04em;
       transition: color .2s;
     }
-    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover { color: var(--accent); }
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(140deg, #daedf8 0%, #c6e1f4 100%);
+      background: linear-gradient(140deg, #dde8f0 0%, #cddded 100%);
       padding: 6rem 2.5rem;
     }
     .hero-inner {
@@ -80,18 +80,18 @@
       object-fit: cover;
       object-position: center top;
       border: 5px solid rgba(255,255,255,.8);
-      box-shadow: 0 0 0 10px rgba(255,255,255,.3), 0 20px 56px rgba(58,124,184,.18);
+      box-shadow: 0 0 0 10px rgba(255,255,255,.3), 0 20px 56px rgba(70,130,180,.18);
     }
     .hero-text h1 {
       font-size: 2.7rem;
       font-weight: 700;
       line-height: 1.12;
       margin-bottom: .35rem;
-      color: var(--navy);
+      color: var(--text);
     }
     .hero-text .title {
       font-size: .95rem;
-      color: var(--blue);
+      color: var(--accent);
       font-weight: 500;
       margin-bottom: 1.4rem;
       letter-spacing: .03em;
@@ -121,10 +121,10 @@
       transition: border-color .2s, color .2s, background .2s, box-shadow .2s;
     }
     .icon-link:hover {
-      border-color: var(--blue);
-      color: var(--blue);
+      border-color: var(--accent);
+      color: var(--accent);
       background: rgba(255,255,255,.9);
-      box-shadow: 0 2px 10px rgba(58,124,184,.18);
+      box-shadow: 0 2px 10px rgba(70,130,180,.18);
     }
     .icon-link svg { display: block; }
 
@@ -138,13 +138,13 @@
       font-weight: 700;
       letter-spacing: .14em;
       text-transform: uppercase;
-      color: var(--blue);
+      color: var(--accent);
       margin-bottom: .45rem;
     }
     .section-title {
       font-size: 1.8rem;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--text);
       margin-bottom: 2.5rem;
       padding-bottom: .7rem;
       border-bottom: 1.5px solid var(--border);
@@ -191,7 +191,7 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: .55rem 1rem;
-      box-shadow: 0 1px 4px rgba(58,124,184,.07);
+      box-shadow: 0 1px 4px rgba(70,130,180,.07);
     }
     .logo-pill img {
       width: 22px;
@@ -214,20 +214,20 @@
     .highlight-card {
       background: var(--white);
       border: 1px solid var(--border);
-      border-left: 4px solid var(--blue);
+      border-left: 4px solid var(--accent);
       border-radius: var(--radius);
       padding: 1.4rem 1.6rem;
-      box-shadow: 0 2px 10px rgba(58,124,184,.07);
+      box-shadow: 0 2px 10px rgba(70,130,180,.07);
       transition: box-shadow .2s, transform .2s;
     }
     .highlight-card:hover {
-      box-shadow: 0 6px 22px rgba(58,124,184,.14);
+      box-shadow: 0 6px 22px rgba(70,130,180,.14);
       transform: translateY(-2px);
     }
     .highlight-card .stat {
       font-size: 2.5rem;
       font-weight: 800;
-      color: var(--navy);
+      color: var(--text);
       line-height: 1;
       letter-spacing: -.02em;
     }
@@ -258,12 +258,12 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
-      background: linear-gradient(90deg, var(--blue), rgba(58,124,184,.45));
+      background: linear-gradient(90deg, var(--accent), rgba(70,130,180,.45));
       opacity: 0;
       transition: opacity .25s;
     }
     .project-card:hover {
-      box-shadow: 0 8px 30px rgba(58,124,184,.13);
+      box-shadow: 0 8px 30px rgba(70,130,180,.13);
       transform: translateY(-3px);
     }
     .project-card:hover::before { opacity: 1; }
@@ -273,8 +273,8 @@
       font-weight: 700;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: var(--blue);
-      background: rgba(58,124,184,.09);
+      color: var(--accent);
+      background: rgba(70,130,180,.09);
       border-radius: 4px;
       padding: .18rem .55rem;
       margin-bottom: 1rem;
@@ -282,7 +282,7 @@
     .project-card h3 {
       font-size: 1rem;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--text);
       margin-bottom: .45rem;
     }
     .project-card p {
@@ -301,8 +301,9 @@
 
     /* ── FOOTER ── */
     footer {
-      background: var(--navy);
-      padding: 2rem 2.5rem;
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      padding: 1.75rem 2.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -310,16 +311,16 @@
     }
     .footer-name {
       font-weight: 600;
-      color: rgba(255,255,255,.55);
+      color: var(--subtle);
     }
     .footer-links { display: flex; gap: 1.5rem; }
     .footer-links a {
-      color: rgba(255,255,255,.38);
+      color: var(--subtle);
       text-decoration: none;
       transition: color .2s;
     }
-    .footer-links a:hover { color: rgba(255,255,255,.8); }
-    .footer-copy { color: rgba(255,255,255,.28); }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy { color: var(--subtle); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
