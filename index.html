@@ -9,9 +9,9 @@
 
     :root {
       --text:    #1c2020;
-      --accent:  #4682b4;
-      --bg:      #f4f5f6;
-      --bg-alt:  #eeeff1;
+      --accent:  #0e73cc;
+      --bg:      #f8f9fb;
+      --bg-alt:  #eef1f7;
       --surface: #f9f9fa;
       --white:   #ffffff;
       --body:    #4a4f50;
@@ -62,7 +62,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: #f7f8fb;
+      background: var(--bg);
       padding: 6rem 2.5rem;
     }
     .hero-inner {
@@ -123,7 +123,7 @@
       border-color: var(--accent);
       color: var(--accent);
       background: rgba(255,255,255,.9);
-      box-shadow: 0 2px 10px rgba(70,130,180,.18);
+      box-shadow: 0 2px 10px rgba(14,115,204,.18);
     }
     .icon-link svg { display: block; }
 
@@ -190,7 +190,7 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: .55rem 1rem;
-      box-shadow: 0 1px 4px rgba(70,130,180,.07);
+      box-shadow: 0 1px 4px rgba(14,115,204,.07);
     }
     .logo-pill img {
       width: 22px;
@@ -216,11 +216,11 @@
       border-left: 4px solid var(--accent);
       border-radius: var(--radius);
       padding: 1.4rem 1.6rem;
-      box-shadow: 0 2px 10px rgba(70,130,180,.07);
+      box-shadow: 0 2px 10px rgba(14,115,204,.07);
       transition: box-shadow .2s, transform .2s;
     }
     .highlight-card:hover {
-      box-shadow: 0 6px 22px rgba(70,130,180,.14);
+      box-shadow: 0 6px 22px rgba(14,115,204,.14);
       transform: translateY(-2px);
     }
     .highlight-card .stat {
@@ -257,12 +257,12 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
-      background: linear-gradient(90deg, var(--accent), rgba(70,130,180,.45));
+      background: linear-gradient(90deg, var(--accent), rgba(14,115,204,.45));
       opacity: 0;
       transition: opacity .25s;
     }
     .project-card:hover {
-      box-shadow: 0 8px 30px rgba(70,130,180,.13);
+      box-shadow: 0 8px 30px rgba(14,115,204,.13);
       transform: translateY(-3px);
     }
     .project-card:hover::before { opacity: 1; }
@@ -273,7 +273,7 @@
       letter-spacing: .1em;
       text-transform: uppercase;
       color: var(--accent);
-      background: rgba(70,130,180,.09);
+      background: rgba(14,115,204,.09);
       border-radius: 4px;
       padding: .18rem .55rem;
       margin-bottom: 1rem;
