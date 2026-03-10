@@ -10,12 +10,10 @@
     :root {
       --navy:    #1c3557;
       --blue:    #3a7cb8;
-      --blue-lt: #5b9fd4;
       --bg:      #eef4fb;
       --bg-alt:  #e4eff9;
       --surface: #f7fafd;
       --white:   #ffffff;
-      --text:    #1a2d42;
       --body:    #4a5f75;
       --subtle:  #7d93a8;
       --border:  #c8daea;
@@ -27,7 +25,7 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: var(--bg);
-      color: var(--text);
+      color: var(--navy);
       line-height: 1.7;
     }
 
@@ -64,7 +62,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(140deg, #d6eaf8 0%, #c3dff2 60%, #b8d8ef 100%);
+      background: linear-gradient(140deg, #daedf8 0%, #c6e1f4 100%);
       padding: 6rem 2.5rem;
     }
     .hero-inner {
@@ -140,7 +138,7 @@
       font-weight: 700;
       letter-spacing: .14em;
       text-transform: uppercase;
-      color: var(--blue-lt);
+      color: var(--blue);
       margin-bottom: .45rem;
     }
     .section-title {
@@ -260,7 +258,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
-      background: linear-gradient(90deg, var(--blue), var(--blue-lt));
+      background: linear-gradient(90deg, var(--blue), rgba(58,124,184,.45));
       opacity: 0;
       transition: opacity .25s;
     }
