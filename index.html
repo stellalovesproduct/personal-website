@@ -4,32 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stella Chu — Product Manager</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --ink:       #111318;
-      --ink-soft:  #484d5a;
-      --ink-faint: #8e93a0;
-      --bg:        #ffffff;
-      --bg-dim:    #f7f8fa;
-      --border:    #e8eaee;
-      --blue:      #1a3f6f;
-      --blue-mid:  #2558a8;
-      --accent:    #e8501a;
-      --radius:    8px;
+      --navy:   #1e3a5f;
+      --teal:   #4a90b8;
+      --teal-light: #6baed6;
+      --gold:   #b8a05a;
+      --bg:     #f0f5fa;
+      --bg-alt: #e8f0f7;
+      --white:  #ffffff;
+      --text:   #1a2535;
+      --muted:  #5a6b80;
+      --border: #cfdce9;
+      --radius: 12px;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', -apple-system, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: var(--bg);
-      color: var(--ink);
-      line-height: 1.75;
+      color: var(--text);
+      line-height: 1.7;
     }
 
     /* ── NAV ── */
@@ -37,95 +35,79 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.92);
+      background: rgba(240,245,250,0.92);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
-      padding: 0 3rem;
+      padding: 0 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 56px;
+      height: 60px;
     }
     .nav-logo {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.05rem;
-      color: var(--ink);
-      letter-spacing: .01em;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--navy);
+      letter-spacing: .02em;
     }
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 2rem;
       list-style: none;
     }
     .nav-links a {
       text-decoration: none;
-      color: var(--ink-faint);
-      font-size: .8rem;
+      color: var(--muted);
+      font-size: .875rem;
       font-weight: 500;
-      letter-spacing: .07em;
-      text-transform: uppercase;
       transition: color .2s;
     }
-    .nav-links a:hover { color: var(--blue); }
+    .nav-links a:hover { color: var(--teal); }
 
     /* ── HERO ── */
     .hero {
-      background: var(--blue);
-      color: #fff;
-      padding: 7rem 3rem 6rem;
+      background: linear-gradient(135deg, var(--navy) 0%, #2c5282 100%);
+      color: var(--white);
+      padding: 6rem 2rem;
     }
     .hero-inner {
-      max-width: 960px;
+      max-width: 1000px;
       margin: 0 auto;
       display: flex;
       align-items: center;
-      gap: 5rem;
+      gap: 4rem;
     }
-    .hero-photo-wrap { flex-shrink: 0; }
     .hero-photo {
+      flex-shrink: 0;
       width: 260px;
       height: 260px;
       border-radius: 50%;
       object-fit: cover;
       object-position: center top;
-      display: block;
-      box-shadow: 0 0 0 6px rgba(255,255,255,.1), 0 24px 64px rgba(0,0,0,.35);
-    }
-    .hero-text { max-width: 520px; }
-    .hero-eyebrow {
-      font-size: .7rem;
-      font-weight: 600;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.4);
-      margin-bottom: 1rem;
+      border: 4px solid rgba(255,255,255,.2);
+      box-shadow: 0 0 0 8px rgba(255,255,255,.07), 0 16px 48px rgba(0,0,0,.35);
     }
     .hero-text h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 3rem;
-      font-weight: 400;
-      line-height: 1.1;
-      margin-bottom: .5rem;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: .4rem;
     }
     .hero-text .title {
-      font-size: .9rem;
-      color: rgba(255,255,255,.5);
-      margin-bottom: 2rem;
-      letter-spacing: .03em;
-    }
-    .hero-divider {
-      width: 36px;
-      height: 2px;
-      background: var(--accent);
-      margin-bottom: 1.75rem;
+      font-size: 1rem;
+      color: var(--teal-light);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      letter-spacing: .02em;
     }
     .hero-text p {
-      font-size: .95rem;
-      color: rgba(255,255,255,.72);
-      line-height: 1.85;
+      font-size: .975rem;
+      color: rgba(255,255,255,.78);
+      max-width: 520px;
+      line-height: 1.8;
     }
     .hero-icons {
-      margin-top: 2.25rem;
+      margin-top: 2rem;
       display: flex;
       gap: 1rem;
     }
@@ -136,7 +118,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.2);
+      border: 1px solid rgba(255,255,255,.25);
       color: rgba(255,255,255,.65);
       text-decoration: none;
       transition: border-color .2s, color .2s, background .2s;
@@ -144,87 +126,77 @@
     .icon-link:hover {
       border-color: rgba(255,255,255,.6);
       color: #fff;
-      background: rgba(255,255,255,.08);
+      background: rgba(255,255,255,.1);
     }
     .icon-link svg { display: block; }
 
-    /* ── SECTION SCAFFOLDING ── */
-    section { padding: 6rem 3rem; }
-    section:nth-of-type(even) { background: var(--bg-dim); }
-    .section-inner { max-width: 960px; margin: 0 auto; }
-    .section-header { margin-bottom: 3.5rem; }
-    .section-title {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2rem;
-      font-weight: 400;
-      color: var(--ink);
+    /* ── SECTIONS ── */
+    section { padding: 5rem 2rem; }
+    section:nth-of-type(even) { background: var(--bg-alt); }
+
+    .section-inner { max-width: 1000px; margin: 0 auto; }
+    .section-label {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: .5rem;
     }
-    .section-sub {
-      font-size: .85rem;
-      color: var(--ink-faint);
-      margin-top: .4rem;
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2.5rem;
+      padding-bottom: .75rem;
+      border-bottom: 2px solid var(--border);
     }
 
     /* ── ABOUT ── */
-    .about-layout {
+    .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5rem;
+      gap: 3.5rem;
       align-items: start;
     }
     .about-text p {
-      color: var(--ink-soft);
-      margin-bottom: 1.2rem;
-      font-size: .95rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-size: .975rem;
     }
     .about-text p:last-child { margin-bottom: 0; }
 
-    /* stat cards */
-    .about-stats {
+    .about-highlights {
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
     }
-    .stat-card {
-      background: var(--blue);
+    .highlight-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--teal);
       border-radius: var(--radius);
-      padding: 2rem 2.25rem;
-      color: #fff;
-      position: relative;
-      overflow: hidden;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 2px 12px rgba(74,144,184,.08);
+      transition: box-shadow .2s, transform .2s;
     }
-    .stat-card::after {
-      content: '';
-      position: absolute;
-      right: -20px;
-      bottom: -20px;
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.05);
+    .highlight-card:hover {
+      box-shadow: 0 6px 24px rgba(74,144,184,.15);
+      transform: translateY(-2px);
     }
-    .stat-card .num {
-      font-family: 'DM Serif Display', serif;
-      font-size: 3.5rem;
+    .highlight-card .stat {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--navy);
       line-height: 1;
-      color: #fff;
-      margin-bottom: .5rem;
+      letter-spacing: -.02em;
     }
-    .stat-card .num span {
-      font-size: 2rem;
-      color: rgba(255,255,255,.6);
-    }
-    .stat-card .label {
-      font-size: .8rem;
-      font-weight: 500;
-      color: rgba(255,255,255,.6);
+    .highlight-card .stat-label {
+      font-size: .85rem;
+      color: var(--muted);
+      margin-top: .4rem;
       line-height: 1.5;
-      letter-spacing: .02em;
     }
-    .stat-card.accent-card {
-      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
-    }
-    .stat-card.accent-card .num { color: #fff; }
 
     /* ── PROJECTS ── */
     .projects-grid {
@@ -233,10 +205,10 @@
       gap: 1.5rem;
     }
     .project-card {
+      background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 2rem;
-      background: var(--bg);
+      padding: 1.75rem;
       transition: box-shadow .25s, transform .25s;
       position: relative;
       overflow: hidden;
@@ -246,12 +218,12 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
-      background: linear-gradient(90deg, var(--blue), var(--accent));
+      background: linear-gradient(90deg, var(--teal), var(--navy));
       opacity: 0;
       transition: opacity .25s;
     }
     .project-card:hover {
-      box-shadow: 0 12px 40px rgba(26,63,111,.1);
+      box-shadow: 0 8px 32px rgba(74,144,184,.15);
       transform: translateY(-3px);
     }
     .project-card:hover::before { opacity: 1; }
@@ -261,67 +233,60 @@
       font-weight: 700;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: var(--ink-faint);
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      padding: .2rem .55rem;
-      margin-bottom: 1.25rem;
+      color: var(--teal);
+      background: rgba(74,144,184,.1);
+      border-radius: 4px;
+      padding: .2rem .6rem;
+      margin-bottom: 1rem;
     }
     .project-card h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.15rem;
-      font-weight: 400;
-      color: var(--ink);
-      margin-bottom: .6rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: .5rem;
     }
     .project-card p {
       font-size: .875rem;
-      color: var(--ink-faint);
+      color: var(--muted);
       line-height: 1.65;
     }
     .project-placeholder {
-      margin-top: 1.5rem;
-      padding-top: 1.25rem;
+      margin-top: 1.25rem;
+      padding-top: 1.1rem;
       border-top: 1px dashed var(--border);
       font-size: .75rem;
-      color: var(--ink-faint);
+      color: var(--border);
       font-style: italic;
     }
 
     /* ── FOOTER ── */
     footer {
-      background: var(--ink);
-      color: rgba(255,255,255,.3);
-      padding: 2.5rem 3rem;
+      background: var(--navy);
+      color: rgba(255,255,255,.4);
+      padding: 2rem 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: .75rem;
-      letter-spacing: .04em;
+      font-size: .8rem;
     }
     .footer-name {
-      font-family: 'DM Serif Display', serif;
-      font-size: .95rem;
-      font-weight: 400;
-      color: rgba(255,255,255,.5);
+      font-weight: 600;
+      color: rgba(255,255,255,.6);
     }
     .footer-links { display: flex; gap: 1.5rem; }
     .footer-links a {
-      color: rgba(255,255,255,.3);
+      color: rgba(255,255,255,.4);
       text-decoration: none;
       transition: color .2s;
     }
-    .footer-links a:hover { color: rgba(255,255,255,.7); }
+    .footer-links a:hover { color: rgba(255,255,255,.8); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      nav { padding: 0 1.5rem; }
-      .hero { padding: 5rem 1.5rem 4rem; }
-      .hero-inner { flex-direction: column; gap: 2.5rem; text-align: center; }
-      .hero-photo { width: 190px; height: 190px; }
+      .hero-inner { flex-direction: column; gap: 2rem; text-align: center; }
+      .hero-photo { width: 180px; height: 180px; }
       .hero-icons { justify-content: center; }
-      section { padding: 4rem 1.5rem; }
-      .about-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .about-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
@@ -341,16 +306,12 @@
   <!-- HERO -->
   <div class="hero">
     <div class="hero-inner">
-      <div class="hero-photo-wrap">
-        <img class="hero-photo" src="stella.jpg" alt="Stella Chu" />
-      </div>
+      <img class="hero-photo" src="stella.jpg" alt="Stella Chu" />
       <div class="hero-text">
-        <div class="hero-eyebrow">Product Manager · FinTech</div>
         <h1>Stella Chu</h1>
-        <div class="title">Payments · E-commerce · Lending · Agentic AI</div>
-        <div class="hero-divider"></div>
+        <div class="title">Senior Product Manager · FinTech</div>
         <p>
-          7+ years building and scaling products across global FinTech —
+          7+ years building and scaling products across payments, e-commerce, and lending —
           with a current focus on applying Agentic AI to unlock new growth opportunities.
         </p>
         <div class="hero-icons">
@@ -372,11 +333,9 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="section-inner">
-      <div class="section-header">
-        <h2 class="section-title">About</h2>
-        <p class="section-sub">Senior Product Manager with a global FinTech track record</p>
-      </div>
-      <div class="about-layout">
+      <div class="section-label">About me</div>
+      <h2 class="section-title">Building products that scale globally</h2>
+      <div class="about-grid">
         <div class="about-text">
           <p>
             I'm a Senior Product Manager with 7+ years of FinTech experience across payments,
@@ -394,14 +353,14 @@
             operational efficiency in financial services.
           </p>
         </div>
-        <div class="about-stats">
-          <div class="stat-card">
-            <div class="num">7<span>+ yrs</span></div>
-            <div class="label">FinTech product management<br/>across payments, lending &amp; e-commerce</div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <div class="stat">7+</div>
+            <div class="stat-label">Years in FinTech product management across payments, lending &amp; e-commerce</div>
           </div>
-          <div class="stat-card accent-card">
-            <div class="num">4<span>×</span></div>
-            <div class="label">Monthly revenue growth<br/>achieved within 12 months</div>
+          <div class="highlight-card">
+            <div class="stat">4×</div>
+            <div class="stat-label">Monthly revenue growth achieved within 12 months</div>
           </div>
         </div>
       </div>
@@ -411,10 +370,8 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="section-inner">
-      <div class="section-header">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-sub">Things I've been building</p>
-      </div>
+      <div class="section-label">Work</div>
+      <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
           <div class="project-tag">Coming soon</div>
