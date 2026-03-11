@@ -298,6 +298,18 @@
       font-style: italic;
     }
 
+    .project-video-wrap {
+      margin-top: 1.2rem;
+      display: flex;
+      justify-content: center;
+    }
+    .project-video-wrap iframe {
+      width: 315px;
+      height: 560px;
+      border: 0;
+      border-radius: 8px;
+    }
+
     /* ── FOOTER ── */
     footer {
       background: var(--bg-alt);
@@ -435,10 +447,17 @@
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <div class="project-tag">Coming soon</div>
-          <h3>Project One</h3>
-          <p>Details about this project will be added soon.</p>
-          <div class="project-placeholder">Placeholder — more to come</div>
+          <div class="project-tag">Side Project</div>
+          <h3>Wandr</h3>
+          <p>A vibe coding project with two other friends. We're planning an Alaska road trip and found it challenging to sort out flights, lodging, car rentals, split expenses, etc. So we built Wandr, a group trip planner that logs itinerary, tracks shared expenses, and automatically calculates who owes whom. Built using Claude Code, Cloudflare Workers, and Notion as the DB. Demo uses Yosemite for privacy reasons. Real destination is Alaska 🏔️</p>
+          <div class="project-video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/VCWnEt5wJdA"
+              title="Wandr demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
         </div>
         <div class="project-card">
           <div class="project-tag">Coming soon</div>
