@@ -309,6 +309,14 @@
       border: 0;
       border-radius: 8px;
     }
+    .project-video-wrap.landscape {
+      display: block;
+    }
+    .project-video-wrap.landscape iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
 
     /* ── FOOTER ── */
     footer {
@@ -463,7 +471,7 @@
           <div class="project-tag">Coming soon</div>
           <h3>Project Two</h3>
           <p>Details about this project will be added soon.</p>
-          <div class="project-video-wrap">
+          <div class="project-video-wrap landscape">
             <iframe
               src="https://www.youtube.com/embed/u3ipoVk64y4"
               title="Project Two demo"
@@ -476,7 +484,14 @@
           <div class="project-tag">Coming soon</div>
           <h3>Project Three</h3>
           <p>Details about this project will be added soon.</p>
-          <div class="project-placeholder">Placeholder — more to come</div>
+          <div class="project-video-wrap landscape">
+            <iframe
+              src="https://www.youtube.com/embed/gox0StQkQGM"
+              title="Project Three demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
