@@ -239,33 +239,45 @@
 
     /* ── PROJECTS ── */
     .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
     .project-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.75rem;
+      padding: 0;
       position: relative;
       overflow: hidden;
       transition: box-shadow .25s, transform .25s;
-    }
-    .project-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), rgba(14,115,204,.45));
-      opacity: 0;
-      transition: opacity .25s;
     }
     .project-card:hover {
       box-shadow: 0 8px 30px rgba(14,115,204,.13);
       transform: translateY(-3px);
     }
-    .project-card:hover::before { opacity: 1; }
+    .project-media-wrap {
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f4f8;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .project-media-wrap iframe {
+      height: 100%;
+      width: auto;
+      border: 0;
+      flex-shrink: 0;
+    }
+    .project-media-wrap.landscape iframe {
+      width: 100%;
+      height: 100%;
+    }
+    .project-info {
+      padding: 1.4rem 1.75rem 1.75rem;
+    }
     .project-tag {
       display: inline-block;
       font-size: .63rem;
@@ -284,39 +296,31 @@
       color: var(--text);
       margin-bottom: .45rem;
     }
-    .project-card p {
+    .project-desc {
       font-size: .875rem;
       color: var(--body);
       line-height: 1.65;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
-    .project-placeholder {
-      margin-top: 1.2rem;
-      padding-top: 1rem;
-      border-top: 1px dashed var(--border);
-      font-size: .73rem;
-      color: var(--subtle);
-      font-style: italic;
-    }
-
-    .project-video-wrap {
-      margin-top: 1.2rem;
-      display: flex;
-      justify-content: center;
-    }
-    .project-video-wrap iframe {
-      width: 315px;
-      height: 560px;
-      border: 0;
-      border-radius: 8px;
-    }
-    .project-video-wrap.landscape {
+    .project-desc.expanded {
       display: block;
+      overflow: visible;
     }
-    .project-video-wrap.landscape iframe {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
+    .learn-more-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--accent);
+      font-size: .8rem;
+      font-family: inherit;
+      cursor: pointer;
+      padding: .3rem 0 0;
+      margin-top: .1rem;
     }
+    .learn-more-btn:hover { text-decoration: underline; }
 
     /* ── FOOTER ── */
     footer {
@@ -455,10 +459,7 @@
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <div class="project-tag">Side Project</div>
-          <h3>Wandr</h3>
-          <p>A vibe coding project with two other friends. We're planning an Alaska road trip and found it challenging to sort out flights, lodging, car rentals, split expenses, etc. So we built Wandr, a group trip planner that logs itinerary, tracks shared expenses, and automatically calculates who owes whom. Built using Claude Code, Cloudflare Workers, and Notion as the DB. Demo uses Yosemite for privacy reasons. Real destination is Alaska 🏔️</p>
-          <div class="project-video-wrap">
+          <div class="project-media-wrap">
             <iframe
               src="https://www.youtube.com/embed/VCWnEt5wJdA"
               title="Wandr demo"
@@ -466,12 +467,15 @@
               allowfullscreen>
             </iframe>
           </div>
+          <div class="project-info">
+            <div class="project-tag">Side Project</div>
+            <h3>Wandr</h3>
+            <p class="project-desc">A vibe coding project with two other friends. We're planning an Alaska road trip and found it challenging to sort out flights, lodging, car rentals, split expenses, etc. So we built Wandr, a group trip planner that logs itinerary, tracks shared expenses, and automatically calculates who owes whom. Built using Claude Code, Cloudflare Workers, and Notion as the DB. Demo uses Yosemite for privacy reasons. Real destination is Alaska 🏔️</p>
+            <button class="learn-more-btn" onclick="toggleDesc(this)">Learn more</button>
+          </div>
         </div>
         <div class="project-card">
-          <div class="project-tag">Coming soon</div>
-          <h3>Project Two</h3>
-          <p>Details about this project will be added soon.</p>
-          <div class="project-video-wrap landscape">
+          <div class="project-media-wrap landscape">
             <iframe
               src="https://www.youtube.com/embed/u3ipoVk64y4"
               title="Project Two demo"
@@ -479,18 +483,27 @@
               allowfullscreen>
             </iframe>
           </div>
+          <div class="project-info">
+            <div class="project-tag">Coming soon</div>
+            <h3>Project Two</h3>
+            <p class="project-desc">Details about this project will be added soon.</p>
+            <button class="learn-more-btn" onclick="toggleDesc(this)">Learn more</button>
+          </div>
         </div>
         <div class="project-card">
-          <div class="project-tag">Coming soon</div>
-          <h3>Project Three</h3>
-          <p>Details about this project will be added soon.</p>
-          <div class="project-video-wrap landscape">
+          <div class="project-media-wrap landscape">
             <iframe
               src="https://www.youtube.com/embed/gox0StQkQGM"
               title="Project Three demo"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen>
             </iframe>
+          </div>
+          <div class="project-info">
+            <div class="project-tag">Coming soon</div>
+            <h3>Project Three</h3>
+            <p class="project-desc">Details about this project will be added soon.</p>
+            <button class="learn-more-btn" onclick="toggleDesc(this)">Learn more</button>
           </div>
         </div>
       </div>
@@ -507,5 +520,17 @@
     </div>
   </footer>
 
+  <script>
+    function toggleDesc(btn) {
+      const desc = btn.previousElementSibling;
+      const expanded = desc.classList.toggle('expanded');
+      btn.textContent = expanded ? 'Show less' : 'Learn more';
+    }
+    document.querySelectorAll('.project-desc').forEach(desc => {
+      if (desc.scrollHeight > desc.clientHeight) {
+        desc.nextElementSibling.style.display = 'block';
+      }
+    });
+  </script>
 </body>
 </html>
